@@ -26,7 +26,7 @@ export default function Navbar(props) {
             
             <WishList />
 
-            <div class="show-reg-form modal-open avatar-img" data-srcav="images/avatar/3.jpg"><i class="fal fa-user"></i>Sign In</div>
+            <div className="show-reg-form modal-open avatar-img" data-srcav="images/avatar/3.jpg"><i className="fal fa-user"></i>Sign In</div>
 
             {isLogin ? <NavbarUser /> : null}
 

@@ -1,10 +1,10 @@
 import React from 'react'
 import { Row, Col } from 'reactstrap'
 
-import Navbar from '../../../layouts/navbar/Navbar'
-import Footer from '../../../layouts/footer/Footer'
-import Content from './contents/Content'
-import MapModal from '../../ui-elements/modal/MapModal'
+import Navbar from '../../../../layouts/navbar/Navbar'
+import Footer from '../../../../layouts/footer/Footer'
+import Content from './components/Content'
+import MapModal from '../../../ui-elements/modal/MapModal'
 
 export default function Home(props) {
     

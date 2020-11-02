@@ -1,8 +1,8 @@
 import React from 'react'
 
-import Testimonilas from '../../../ui-elements/testimonials/Testimonials'
+import Testimonilas from '../../../../ui-elements/testimonials/Testimonials'
 
-import avatar from '../../../../assets/images/avatar/1.jpg'
+import avatar from '../../../../../assets/images/avatar/1.jpg'
 
 const testimonilas = [
     {

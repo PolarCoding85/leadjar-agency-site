@@ -9,34 +9,34 @@ export default function Process(props) {
                 <h2>How it works</h2>
                 <div className="section-subtitle">Discover &amp; Connect </div>
                 <span className="section-separator"></span>
-                <p>Morbi varius, nulla sit amet rutrum elementum, est elit finibus tellus, ut tristique elit risus at metus.</p>
+                <p>We match you with pre-vetted tax & accounting professionals in your area.</p>
             </div>
             <div className="process-wrap fl-wrap">
                 <ul className="no-list-style">
                     <li>
                         <div className="process-item">
                             <span className="process-count">01 </span>
-                            <div className="time-line-icon"><i className="fal fa-map-marker-alt"></i></div>
-                            <h4> Find Interesting Place</h4>
-                            <p>Proin dapibus nisl ornare diam varius tempus. Aenean a quam luctus, finibus tellus ut, convallis eros sollicitudin turpis.</p>
+                            <div className="time-line-icon"><i className="fal fa-check-circle"></i></div>
+                            <h4> Select a Service</h4>
+                            <p>Select from individual tax preparation to business payroll & bookkeeping. Our screened professionals are ready to help you today.</p>
                         </div>
                         <span className="pr-dec"></span>
                     </li>
                     <li>
                         <div className="process-item">
                             <span className="process-count">02</span>
-                            <div className="time-line-icon"><i className="fal fa-mail-bulk"></i></div>
-                            <h4> Contact a Few Owners</h4>
-                            <p>Faucibus ante, in porttitor tellus blandit et. Phasellus tincidunt metus lectus sollicitudin feugiat pharetra consectetur.</p>
+                            <div className="time-line-icon"><i className="fal fa-magic"></i></div>
+                            <h4> Get Matched</h4>
+                            <p>Our system then matches you with one or more of our pre-vetted tax & accounting professionals in a matter of seconds.</p>
                         </div>
                         <span className="pr-dec"></span>
                     </li>
                     <li>
                         <div className="process-item">
                             <span className="process-count">03</span>
-                            <div className="time-line-icon"><i className="fal fa-layer-plus"></i></div>
-                            <h4> Make a Listing</h4>
-                            <p>Maecenas pulvinar, risus in facilisis dignissim, quam nisi hendrerit nulla, id vestibulum metus nullam viverra porta.</p>
+                            <div className="time-line-icon"><i className="fal fa-smile-beam"></i></div>
+                            <h4> Save Time & Money</h4>
+                            <p>Save time by eliminating endless Google searches. Then save money by getting your taxes & accounting needs handled right the first time!</p>
                         </div>
                     </li>
                 </ul>

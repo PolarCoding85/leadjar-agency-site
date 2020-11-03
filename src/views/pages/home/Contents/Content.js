@@ -2,15 +2,12 @@ import React from "react"
 import { Row, Col } from 'reactstrap'
 
 import HeroSection from './Hero'
-import SliderSection from './Slider'
-import BestCitySection from './BestCity'
-import ParallaxOne from './ParallaxOne'
-import MostPopularPlaces from "./MostPopularPlaces"
-import ParallaxTwo from './ParallaxTwo'
+import TopServices from './TopServices'
 import Process from "./Process"
-import AppAvailable from './AppAvailable'
-import ClientsCarousel from './ClientsCarousel'
+import CompareQuoteForm from './CompareQuoteForm'
 import Testimonilas from "./Testimonilas"
+import JoinNetworkForm from "./JoinNetworkForm"
+import PopularCity from './PopularCity'
 
 export default function Content(props) {
   
@@ -22,31 +19,22 @@ export default function Content(props) {
               <HeroSection />
             </Col>
             <Col lg="12" md="12" sm="12">
-              <SliderSection />
-            </Col>
-            <Col lg="12" md="12" sm="12">
-              <BestCitySection />
-            </Col>
-            <Col lg="12" md="12" sm="12">
-              <ParallaxOne />
-            </Col>
-            <Col lg="12" md="12" sm="12">
-              <MostPopularPlaces />
-            </Col>
-            <Col lg="12" md="12" sm="12">
-              <ParallaxTwo />
+              <TopServices />
             </Col>
             <Col lg="12" md="12" sm="12">
               <Process />
             </Col>
             <Col lg="12" md="12" sm="12">
-              <AppAvailable />
+              <CompareQuoteForm />
             </Col>
             <Col lg="12" md="12" sm="12">
               <Testimonilas />
             </Col>
             <Col lg="12" md="12" sm="12">
-              <ClientsCarousel />
+              <JoinNetworkForm />
+            </Col>
+            <Col lg="12" md="12" sm="12">
+              <PopularCity />
             </Col>
         </Row>
       </div>

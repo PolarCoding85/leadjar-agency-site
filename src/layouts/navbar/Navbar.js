@@ -8,6 +8,7 @@ import SearchBar from './SearchBar'
 import WishList from "./WishList"
 import NavbarUser from './NavbarUser'
 import LanguageMenu from './LanguageMenu'
+import JoinLink from './JoinLink'
 import MainMenu from './MainMenu'
 
 export default function Navbar(props) {
@@ -17,20 +18,12 @@ export default function Navbar(props) {
 
     return (
         <header className={!isLogin ? "main-header" : "main-header dsh-header"}>
-            {/*  logo */}
             <a href="/" className="logo-holder"><img src={Logo} alt="" /></a>
-            {/*  logo end */}
-            <SearchBar />
-            
-            <a href="dashboard-add-listing.html" className="add-list color-bg">Add Listing <span><i className="fal fa-layer-plus"></i></span></a>
-            
-            <WishList />
-
+            <a href="dashboard-add-listing.html" className="add-list color-bg">Get a Quote</a>
             <div className="show-reg-form modal-open avatar-img" data-srcav="images/avatar/3.jpg"><i className="fal fa-user"></i>Sign In</div>
 
             {isLogin ? <NavbarUser /> : null}
-
-            <LanguageMenu />
+            <JoinLink />
 
             {/*  nav-button-wrap  */}
             <div className="nav-button-wrap color-bg">
@@ -40,7 +33,7 @@ export default function Navbar(props) {
             </div>
             {/*  nav-button-wrap end */}
 
-            <MainMenu />
+            {/* <MainMenu /> */}
         </header>
     )
 }

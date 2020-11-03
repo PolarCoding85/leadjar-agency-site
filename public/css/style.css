@@ -360,7 +360,7 @@ blockquote p {
 	content:'';
 	position:absolute;
 	right:0;
-	width:480px;
+	width:280px;
 	height:100%;
 	bottom:0;
 	opacity:1;
@@ -476,7 +476,7 @@ blockquote p {
 	top:50%;
 	height:20px;
 	margin-top:-10px;
-	width:1px;
+	/* width:1px; */
 	background:rgba(255,255,255,0.31);
 }
 .show-reg-form i {
@@ -512,6 +512,20 @@ blockquote p {
 	z-index:106;
 	font-size:12px;
 	border:1px solid transparent;
+}
+.show-join-link {
+	color:#fff;
+	cursor:pointer;
+	float:right;
+	padding:10px 20px 10px 0;
+	position:relative;
+	z-index:106;
+	font-size:13px;
+	border:1px solid transparent;
+
+}
+.show-join-link:hover {
+	color: #4DB7FE
 }
 .show-lang i.arrlan {
 	position:absolute;
@@ -1241,7 +1255,7 @@ section.color-bg .section-title .breadcrumbs a:before {
 	float:left;
 	width:100%;
 	position:relative;
-	margin:20px 0;
+	/* margin:20px 0; */
 }
 section.gray-section .section-separator {
 	background: #f9f9f9;
@@ -1289,7 +1303,7 @@ section.gray-section .section-separator {
 	top:0;
 	height:3px;
 	margin-left:-25px;
-	width:50px;
+	/* width:50px; */
 	border-radius:3px;
 	z-index:2;
 }
@@ -1438,7 +1452,7 @@ section.gray-section .section-separator {
 .intro-item h3 {
 	color:#fff;
 	font-weight:600;
-	font-size:12px;
+	font-size:15px;
 }
 .mob_bg {
 	display:none;
@@ -1501,16 +1515,19 @@ section.gray-section .section-separator {
 	display:block;
 }
 .main-search-input-tabs {
-	margin-top:50px;
+	margin: 35px auto;
+	width: 50%;
+	max-width: 500px;
+	float: none; 
 }
 .main-search-input {
-	padding:8px 180px 8px 0;
+	/* padding:8px 180px 8px 0; */
 }
 .main-search-input-item {
-	float:left;
-	width:33.3%;
+	/* float:left; */
+	/* width:33.3%; */
 	box-sizing:border-box;
-	border-right:1px solid #eee;
+	/* border-right:1px solid #eee; */
 	height:50px;
 	padding:0 5px;
 	position:relative;
@@ -1520,7 +1537,8 @@ section.gray-section .section-separator {
 	border:none;
 	width:100%;
 	height:50px;
-	padding-left:40px;
+	padding-left:20px;
+	font-size: 18px;
 }
 .main-search-input-item label {
 	position:absolute;
@@ -1530,14 +1548,18 @@ section.gray-section .section-separator {
 } 
 .main-search-button {
 	position:absolute;
-	right:10px;
+	right:0px;
 	width:160px;
 	color:#fff;
-	top:10px;
+	top:0px;
 	bottom:10px;
 	border-radius:6px;
 	border:none;
 	cursor:pointer;
+	font-size: 18px;
+    font-weight: bold;
+	background: #4db7fe !important;
+	height: 50px;
 }
 .main-search-button i {
 	padding-left:10px;
@@ -9318,4 +9340,85 @@ section.parallax-section {
 .nice-select .list::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background:#ccc;
+}
+
+.top-services, .popular-cities {
+	background: #fff;
+	margin: 0px;
+	text-align: left;
+}
+.top-services-title {
+	color: #566985;
+    font-size: 25px;
+	font-weight: bold;
+}
+.top-services ul {
+	text-align: center;
+}
+.top-services li a {
+	color: #566985;
+	width: 100px;
+}
+.top-services li a:hover i  {
+	background: #4bb6fe;
+}
+.top-services a:hover {
+	color: #566985 !important;
+}
+.top-services li a i {
+	background: #fff;
+    padding: 32px;
+	border-radius: 50px;
+}
+
+.compare-quote-form {
+	padding: 20px;
+	background: #fbfbfb;
+    border-radius: 10px;
+    opacity: 2.6;
+}
+.quote-form-text {
+	font-size: 17px;
+    color: #566985;
+	margin-top: -13px;
+	margin-bottom: 20px;
+}
+.compare-quote-btn {
+	float: right;
+	padding: 20px 22px;
+    position: relative;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 15px;
+    transition: all .2s ease-in-out;
+	box-shadow: 0px 0px 0px 6px rgba(255,255,255,0.1);
+	margin-top: 20px;
+}
+
+.join-network-form-icon {
+	font-size: 50px;
+    background: #5ecfb1;
+    padding: 15px;
+    border-radius: 50px;
+    color: #fff;
+    float: left;
+	margin-right: 20px;
+	margin-top: 20px;
+}
+
+.popular-cities {
+	padding: 100px 0;
+}
+.popular-city-title {
+	font-weight: 500;
+}
+.popular-cities ul {
+	text-align: left;
+}
+.popular-cities ul li {
+	margin-bottom: 20px;
+}
+.popular-cities ul li a{
+	font-size: 20px;
 }

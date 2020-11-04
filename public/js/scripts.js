@@ -633,6 +633,10 @@ function initTowhub() {
         $('.modal , .reg-overlay').fadeOut(200);
         $("html, body").removeClass("hid-body");
         $(".modal_main").removeClass("vis_mr");
+
+        $('.quote-form-modal, .reg-overlay').fadeOut(200);
+        $("html, body").removeClass("hid-body");
+        $(".main-quote-form-modal").removeClass("vis_mr");
     };
     $('.modal-open').on("click", function (e) {
         e.preventDefault();
@@ -640,7 +644,7 @@ function initTowhub() {
         $(".modal_main").addClass("vis_mr");
         $("html, body").addClass("hid-body");
     });
-    $('.close-reg , .reg-overlay').on("click", function () {
+    $('.close-reg, .quote-form-modal-close-reg, .reg-overlay').on("click", function () {
         modal.hide();
     });
     $(".show_gcc").on("click", function (e) {
@@ -652,8 +656,8 @@ function initTowhub() {
     });
     $('.quote-from-modal-open').on('click', function(e) {
         e.preventDefault();
-        $('.modal, .reg-overlay').fadeIn(200);
-        $(".quote-form-modal").addClass("vis_mr");
+        $('.quote-form-modal, .reg-overlay').fadeIn(200);
+        $(".main-quote-form-modal").addClass("vis_mr");
         $("html, body").addClass("hid-body");
     });
     // Header ------------------

@@ -1678,7 +1678,7 @@ section.gray-section .section-separator {
     animation: move_wave 14s linear infinite;
 }
 /*------ register form------------------------------------------------*/
-.main-register-wrap , .reg-overlay , .map-overlay, .quote-form {
+.main-register-wrap , .reg-overlay , .map-overlay, .quote-form-wrap {
 	position:fixed;
 	top:0;
 	left:0;
@@ -1700,13 +1700,13 @@ section.gray-section .section-separator {
 .hid-body {
     overflow:hidden;
 }
-.main-register-holder {
+.main-register-holder, .quote-form-holder {
 	max-width:420px;
 	margin:150px auto 50px;
 	position:relative;
 	z-index:5;
 }
-.main-register, .quote-form-modal {
+.main-register, .main-quote-form-modal {
 	float:left;
 	width:100%;
 	position:relative;
@@ -1726,7 +1726,7 @@ section.gray-section .section-separator {
 	opacity:1;
     transform :scale(1.0);	
 }
-.close-reg {
+.close-reg, .quote-form-modal-close-reg {
 	position:absolute;
 	top:0;
 	right:0;
@@ -1739,7 +1739,7 @@ section.gray-section .section-separator {
 	border-left:1px solid rgba(255,255,255,0.11);
 	font-size:18px;
 }
-.main-register_title {
+.main-register_title, .quote-form-modal-title {
 	position:absolute;
 	left:0;
 	top:0;
@@ -1754,10 +1754,37 @@ section.gray-section .section-separator {
 	width:100%;
 	z-index:2;
 }
-.main-register_title span {
+.main-register_title span, .quote-form-modal-title span {
 	text-transform:uppercase;
 	font-weight:800;
 }
+
+.quote-form-holder {
+	max-width: 500px;
+}
+.main-quote-form-modal {
+	padding: 60px 0 20px;
+}
+.quote-form-modal-title {
+	background: #fff;
+	color: #566985;
+	font-size: 16px;
+}
+.quote-form-modal-title span {
+	color: #4db7fe;
+}
+.quote-form-modal-close-reg {
+	color: #566985;
+}
+.quote-form-modal-question {
+	color: #566985;
+	margin-bottom: 30px;
+}
+.quote-form-modal-btn {
+	background: #4db7fe;
+    padding: 15px 40px;
+}
+
 .soc-log {
 	padding:15px 0;
 }
@@ -9403,6 +9430,11 @@ section.parallax-section {
     transition: all .2s ease-in-out;
 	box-shadow: 0px 0px 0px 6px rgb(107 107 107 / 11%);
 	margin-top: 20px;
+}
+.quote-form-modal-description {
+	color: #566985;
+	margin-top: 30px;
+	line-height: 25px;
 }
 
 .join-network-form-icon {

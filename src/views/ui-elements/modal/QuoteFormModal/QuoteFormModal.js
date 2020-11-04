@@ -13,33 +13,39 @@ export default function QuoteFormModal(props) {
     const { onOpenModal, onCloseModal } = props
 
     const [formType, setFormType] = useState('stateForm')
+    const [state, setState] = useState('')
+    const [formation, setFormation] = useState('')
+    const [businessName, setBusinessName] = useState('')
+    const [contact, setContact] = useState([])
 
-    const handleSubmitForm = (type, value) => {
-        setFormType(type)
-        // e.preventDefault();
-        // const formData = new FormData(e.target)
-        // const cardData = {
-        //     cardNumber: formData.get('card_number'),
-        //     name: formData.get('name'),
-        //     expiration: formData.get('expiration'),
-        //     securityCode: formData.get('security_code'),
-        //     zipCode: formData.get('zip_code'),
+    const handleSubmitForm = (type, value, nextType) => {
+        setFormType(nextType)
+
+        // if (type === 'stateForm') {
+        //     setFormType(value)
+        // } else if (type === 'formationForm') {
+        //     setFormation(value)
+        // } else if (type === 'businessNameForm') {
+        //     setBusinessName(value)
+        // } else if (type === 'contactForm') {
+        //     setContact(value)
+
+
         // }
-
     }
 
     return (
-        <div className="quote-form-wrap modal">
+        <div className="quote-form-wrap quote-form-modal">
             <div className="reg-overlay"></div>
-            <div className="quote-form-holder tabs-act">
-                <div className="quote-form-modal fl-wrap  modal_main">
-                    <div className="quote-form-modal-title">Welcome to <span><strong>Town</strong>Hub<strong>.</strong></span></div>
-                    <div className="close-reg"><i className="fal fa-times"></i></div>
+            <div className="quote-form-holder">
+                <div className="main-quote-form-modal fl-wrap">
+                    <div className="quote-form-modal-title">Get connected with the best <span><strong>Business Formation</strong></span> Pro</div>
+                    <div className="quote-form-modal-close-reg"><i className="fal fa-times"></i></div>
                     <div className="tabs-container">
-                        {formType === 'stateForm' ? <StateForm /> : null}
-                        {formType === 'formationForm' ? <FormationTypeForm /> : null}
-                        {formType === 'businessNameForm' ? <BusinessNameForm /> : null}
-                        {formType === 'contactForm' ? <ContactForm /> : null}
+                        {formType === 'stateForm' ? <StateForm onSubmitForm={handleSubmitForm} /> : null}
+                        {formType === 'formationForm' ? <FormationTypeForm onSubmitForm={handleSubmitForm} /> : null}
+                        {formType === 'businessNameForm' ? <BusinessNameForm onSubmitForm={handleSubmitForm} /> : null}
+                        {formType === 'contactForm' ? <ContactForm onSubmitForm={handleSubmitForm} /> : null}
                     </div>
                 </div>
             </div>

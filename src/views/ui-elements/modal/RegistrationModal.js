@@ -8,7 +8,7 @@ export default function RegistrationModal(props) {
         <div className="main-register-wrap modal">
             <div className="reg-overlay"></div>
             <div className="main-register-holder tabs-act">
-                <div className="main-register fl-wrap  modal_main">
+                <div className="main-register fl-wrap modal_main">
                     <div className="main-register_title">Welcome to <span><strong>Town</strong>Hub<strong>.</strong></span></div>
                     <div className="close-reg"><i className="fal fa-times"></i></div>
                     <ul className="tabs-menu fl-wrap no-list-style">

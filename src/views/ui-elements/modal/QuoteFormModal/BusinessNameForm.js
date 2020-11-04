@@ -10,20 +10,21 @@ export default function BusinessNameForm(props) {
     const [businessName, setBusinessName] = useState('')
 
     return (
-        <Form onSubmit={onSubmitForm('businessNameForm', businessName)}>
-            <Row className="match-height mt-30 text-center state-form">
-                <Col lg="12" md="12" sm="12">
-                    <h3 className="form-title">What will the name of your business be?</h3>
-                </Col>
-                <Col lg="12" md="12" sm="12">
-                    <FormGroup>
-                        <Input placeholder="Name of your business" value={businessName} onChange={(e) => setBusinessName(e.target.value)} required/>
-                    </FormGroup>
-                </Col>
-                <Col lg="12" md="12" sm="12">
-                    <Button type="submit" className="btn">Continue</Button>
-                </Col>
-            </Row>
-        </Form>
+        <div className="custom-form businessName-form">
+            <form>
+                <Row className="match-height mt-30 text-center justify-content-center">
+                    <Col lg="12" md="12" sm="12">
+                        <h3 className="quote-form-modal-question">What will the name of your business be?</h3>
+                    </Col>
+                    <Col lg="2" md="32" sm="2"></Col>
+                    <Col lg="8" md="8" sm="8">
+                        <input placeholder="Name of your business" type="text" onChange={(e) => setBusinessName(e.target.value)} required/>
+                    </Col>
+                    <Col lg="12" md="12" sm="12">
+                        <button type="submit" className="btn quote-form-modal-btn" onClick={() => onSubmitForm('businessNameForm', businessName, 'contactForm')}>Continue</button>
+                    </Col>
+                </Row>
+            </form>
+        </div>
     )
 }

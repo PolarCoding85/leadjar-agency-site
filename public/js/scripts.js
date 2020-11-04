@@ -650,6 +650,12 @@ function initTowhub() {
     $(".close_gcc").on("click", function () {
         $(this).parent(".geodir-category_contacts").removeClass("visgdcc");
     });
+    $('.quote-from-modal-open').on('click', function(e) {
+        e.preventDefault();
+        $('.modal, .reg-overlay').fadeIn(200);
+        $(".quote-form-modal").addClass("vis_mr");
+        $("html, body").addClass("hid-body");
+    });
     // Header ------------------
     $(".more-filter-option").on("click", function () {
         $(".hidden-listing-filter").slideToggle(500);

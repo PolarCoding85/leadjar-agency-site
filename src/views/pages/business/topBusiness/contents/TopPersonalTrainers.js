@@ -73,14 +73,14 @@ export default function TopPersonalTrainers(props) {
                         <PlaceCard place={place} key={index} gridType="three-columns-grid"/>
                     ))}
                 </div>
-                <div class="pagination">
-                    <a href="#" class="prevposts-link"><i class="fas fa-caret-left"></i><span>Prev</span></a>
-                    <a href="#" class="current-page">1</a>
+                <div className="pagination">
+                    <a href="#" className="prevposts-link"><i className="fas fa-caret-left"></i><span>Prev</span></a>
+                    <a href="#" className="current-page">1</a>
                     <a href="#">2</a>
                     <a href="#">3</a>
                     <a href="#">...</a>
                     <a href="#">7</a>
-                    <a href="#" class="nextposts-link"><span>Next</span><i class="fas fa-caret-right"></i></a>
+                    <a href="#" className="nextposts-link"><span>Next</span><i className="fas fa-caret-right"></i></a>
                 </div>
             </div>
         </section>

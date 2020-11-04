@@ -427,7 +427,7 @@ blockquote p {
     transition: all .2s ease-in-out;
     box-shadow: 0px 0px 0px 6px rgba(255,255,255,0.1);
 }
-.add-list:hover {
+.add-list:hover, .compare-quote-btn:hover {
     box-shadow: 0px 0px 0px 6px rgba(255,255,255,0.0);
 } 
 .add-list span {
@@ -1397,6 +1397,7 @@ section.gray-section .section-separator {
 .hero-categories li{
 	display:inline-block;
 	padding:0 30px;
+	vertical-align: top;
 }
 .hero-categories li a {
 	display:block;
@@ -1677,7 +1678,7 @@ section.gray-section .section-separator {
     animation: move_wave 14s linear infinite;
 }
 /*------ register form------------------------------------------------*/
-.main-register-wrap , .reg-overlay , .map-overlay {
+.main-register-wrap , .reg-overlay , .map-overlay, .quote-form {
 	position:fixed;
 	top:0;
 	left:0;
@@ -1705,7 +1706,7 @@ section.gray-section .section-separator {
 	position:relative;
 	z-index:5;
 }
-.main-register {
+.main-register, .quote-form-modal {
 	float:left;
 	width:100%;
 	position:relative;

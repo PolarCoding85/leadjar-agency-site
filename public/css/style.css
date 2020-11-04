@@ -9342,15 +9342,16 @@ section.parallax-section {
     background:#ccc;
 }
 
-.top-services, .popular-cities {
+.top-services, .popular-cities, .compare-quote {
 	background: #fff;
 	margin: 0px;
 	text-align: left;
 }
-.top-services-title {
+.top-services-title, .compare-quote-from-title {
 	color: #566985;
     font-size: 25px;
 	font-weight: bold;
+	padding: 50px 0 30px;
 }
 .top-services ul {
 	text-align: center;
@@ -9361,6 +9362,7 @@ section.parallax-section {
 }
 .top-services li a:hover i  {
 	background: #4bb6fe;
+	box-shadow: 0 9px 26px rgb(58 87 135 / 43%);
 }
 .top-services a:hover {
 	color: #566985 !important;
@@ -9371,11 +9373,17 @@ section.parallax-section {
 	border-radius: 50px;
 }
 
+.compare-quote {
+	padding-top: 50px;
+}
 .compare-quote-form {
 	padding: 20px;
-	background: #fbfbfb;
     border-radius: 10px;
-    opacity: 2.6;
+	background: #fff;
+    box-shadow: 0 9px 26px rgba(58, 87, 135, 0.1);
+}
+.compare-quote-from-title, .join-network-form-title {
+	padding: 10px 0 30px;
 }
 .quote-form-text {
 	font-size: 17px;
@@ -9392,7 +9400,7 @@ section.parallax-section {
     font-weight: 500;
     font-size: 15px;
     transition: all .2s ease-in-out;
-	box-shadow: 0px 0px 0px 6px rgba(255,255,255,0.1);
+	box-shadow: 0px 0px 0px 6px rgb(107 107 107 / 11%);
 	margin-top: 20px;
 }
 
@@ -9404,11 +9412,11 @@ section.parallax-section {
     color: #fff;
     float: left;
 	margin-right: 20px;
-	margin-top: 20px;
+	margin-top: 10px;
 }
 
 .popular-cities {
-	padding: 100px 0;
+	padding: 50px 0 80px;
 }
 .popular-city-title {
 	font-weight: 500;

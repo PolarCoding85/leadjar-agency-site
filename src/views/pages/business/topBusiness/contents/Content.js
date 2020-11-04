@@ -2,12 +2,10 @@ import React from "react"
 import { Row, Col } from 'reactstrap'
 
 import HeroSection from './Hero'
-import TopServices from './TopServices'
-import Process from "./Process"
-import CompareQuoteForm from '../../../ui-elements/form/CompareQuoteForm'
-import Testimonilas from "./Testimonilas"
-import JoinNetworkForm from "../../../ui-elements/form/JoinNetworkForm"
-import PopularCity from '../../../ui-elements/list/PopularCity'
+import CompareQuoteForm from '../../../../ui-elements/form/CompareQuoteForm'
+import TopPersonTrainers from './TopPersonalTrainers'
+import JoinNetworkForm from "../../../../ui-elements/form/JoinNetworkForm"
+import PopularCity from '../../../../ui-elements/list/PopularCity'
 
 export default function Content(props) {
   
@@ -19,16 +17,10 @@ export default function Content(props) {
               <HeroSection />
             </Col>
             <Col lg="12" md="12" sm="12">
-              <TopServices />
-            </Col>
-            <Col lg="12" md="12" sm="12">
-              <Process />
-            </Col>
-            <Col lg="12" md="12" sm="12">
               <CompareQuoteForm />
             </Col>
             <Col lg="12" md="12" sm="12">
-              <Testimonilas />
+              <TopPersonTrainers />
             </Col>
             <Col lg="12" md="12" sm="12">
               <JoinNetworkForm />

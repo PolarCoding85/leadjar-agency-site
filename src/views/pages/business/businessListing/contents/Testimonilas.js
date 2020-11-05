@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Testimonilas from '../../../../ui-elements/cards/TestimonialCard'
+import TestimonilaCard from '../../../../ui-elements/cards/TestimonialCard'
 
 import avatar from '../../../../../assets/images/avatar/1.jpg'
 
@@ -38,6 +38,6 @@ const testimonilas = [
 export default function TestimonilasSection(props) {
     
     return (
-        <Testimonilas testimonilas={testimonilas}/>
+        <TestimonilaCard testimonilas={testimonilas}/>
     );
 }

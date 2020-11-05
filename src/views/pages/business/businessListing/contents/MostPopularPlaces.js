@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-import blankImage from '../../../../assets/images/all/1.jpg'
-import blankAvatar from '../../../../assets/images/avatar/1.jpg'
+import blankImage from '../../../../../assets/images/all/1.jpg'
+import blankAvatar from '../../../../../assets/images/avatar/1.jpg'
 
 const places = [
     {

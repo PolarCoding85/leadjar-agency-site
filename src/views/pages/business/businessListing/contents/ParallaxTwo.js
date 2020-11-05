@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 
-import parallaxBg from '../../../../assets/images/bg/1.jpg'
+import parallaxBg from '../../../../../assets/images/bg/1.jpg'
 
 export default function ParallaxTwo(props) {
   return (

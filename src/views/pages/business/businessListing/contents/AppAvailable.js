@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react"
 
-import Logo from '../../../../assets/images/logo.png'
-import ApiImage from '../../../../assets/images/api.png'
-import ApiImage1 from '../../../../assets/images/api/1.jpg'
+import Logo from '../../../../../assets/images/logo.png'
+import ApiImage from '../../../../../assets/images/api.png'
+import ApiImage1 from '../../../../../assets/images/api/1.jpg'
 
 export default function ParallaxTwo(props) {
   return (

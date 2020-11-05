@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react"
-import { useDispatch, useSelector } from "react-redux"
+import React from "react"
 
-import cityImage from '../../../../assets/images/all/1.jpg'
+import CityCard from '../../../../ui-elements/cards/CityCard'
+
+import cityImage from '../../../../../assets/images/all/1.jpg'
 
 const bestCities = [
   {
@@ -51,15 +52,7 @@ export default function BestCity(props) {
                   {/* listing-item-grid  --> */}
                   {bestCities.map((bestCity, index) => (
                     <div className="col-sm-4" key={index}>
-                        <div className="listing-item-grid">
-                            <div className="bg" data-bg={bestCity.image}></div>
-                            <div className="d-gr-sec"></div>
-                            <div className="listing-counter color2-bg"><span>{bestCity.locations} </span> Locations</div>
-                            <div className="listing-item-grid_title">
-                                <h3><a href="listing.html">{bestCity.city}</a></h3>
-                                <p>{bestCity.description}</p>
-                            </div>
-                        </div>
+                      <CityCard city={bestCity} />
                     </div>
                   ))}
               </div>

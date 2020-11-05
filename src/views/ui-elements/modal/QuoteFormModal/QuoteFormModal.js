@@ -27,11 +27,9 @@ export default function QuoteFormModal(props) {
         //     setFormation(value)
         // } else if (type === 'businessNameForm') {
         //     setBusinessName(value)
-        // } else if (type === 'contactForm') {
-        //     setContact(value)
-
-
-        // }
+         if (type === 'contactForm') {
+            setContact(value)
+        }
     }
 
     return (

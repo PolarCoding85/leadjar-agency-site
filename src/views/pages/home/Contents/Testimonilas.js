@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Testimonilas from '../../../ui-elements/testimonials/Testimonials'
+import Testimonilas from '../../../ui-elements/cards/TestimonialCard'
 
 import avatar from '../../../../assets/images/avatar/1.jpg'
 

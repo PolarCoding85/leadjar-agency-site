@@ -8,7 +8,8 @@ import Contact from './views/pages/contact/Contact';
 import TopBusiness from './views/pages/business/topBusiness/TopBusiness'
 import BusinessSignUp from './views/pages/business/signUp/businessSignUp';
 import BusinessListing from './views/pages/business/businessListing/BusinessListing'
-import ThankYouPage from './views/pages/thankYou/ThankYou'
+import LeadThankYouPage from './views/pages/leadThankYou/ThankYou'
+import BusinessThankYouPage from './views/pages/business/thankYou/BusinessThankYou'
 
 export default function AppRouter() {
     return (
@@ -16,10 +17,11 @@ export default function AppRouter() {
             <Switch>
                 <Route path="/" exact={true} component={Home} />
                 <Route path="/contact" component={Contact} />
-                <Route path="/thankYou" component={ThankYouPage} />
+                <Route path="/leadThankYou" component={LeadThankYouPage} />
                 <Route path="/business" component={TopBusiness} />
                 <Route path="/business_signUp" component={BusinessSignUp} />
                 <Route path="/business_listing" component={BusinessListing} />
+                <Route path="/business_thankYou" component={BusinessThankYouPage} />
             </Switch>
         </Router>
     )

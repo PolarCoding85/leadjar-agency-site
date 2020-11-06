@@ -9375,7 +9375,7 @@ section.parallax-section {
 	margin: 0px;
 	text-align: left;
 }
-.top-services-title, .compare-quote-from-title, .quote-card-title {
+.top-services-title, .compare-quote-from-title, .quote-card-title, .contact-card-title {
 	color: #566985;
     font-size: 25px;
 	font-weight: bold;
@@ -9404,7 +9404,7 @@ section.parallax-section {
 .compare-quote {
 	padding-top: 50px;
 }
-.compare-quote-form {
+.compare-quote-form, .waring-alert {
 	padding: 20px;
     border-radius: 10px;
 	background: #fff;
@@ -9475,7 +9475,7 @@ section.parallax-section {
 .quote-card-title {
 	padding: 0 0 20px;
 }
-.quote-card-save-icon {
+.quote-card-save-icon, .contact-card-txt {
 	color: #566985;
 	font-size: 18px;
 	margin: 5px 40px;
@@ -9518,4 +9518,29 @@ section.parallax-section {
 	display: inline-block;
     margin-top: 60px;
     position: relative;
+}
+
+/* business Thank you page */
+.business-thankyou-title h2 {
+	margin-bottom: 20px;
+}
+.business-thankyou-title p {
+	font-size: 18px;
+}
+.waring-alert {
+	background: #f2ba25;
+	font-size: 18px;
+    color: #fff;
+}
+.waring-alert i {
+	margin-right: 15px;
+}
+.contact-card-title {
+	padding: 0 0 5px;
+}
+.contact-card-txt {
+	margin: 5px 0;
+}
+.contact-card-name {
+	margin-bottom: 30px;
 }

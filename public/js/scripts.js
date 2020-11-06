@@ -873,84 +873,84 @@ function initTowhub() {
         }
     });
     //   scrollToFixed------------------
-    $(".fixed-listing-header").scrollToFixed({
-        minWidth: 1064,
-        marginTop: 80,
-        removeOffsets: true,
+    // $(".fixed-listing-header").scrollToFixed({
+    //     minWidth: 1064,
+    //     marginTop: 80,
+    //     removeOffsets: true,
 
-        limit: function () {
-            var a = $(".limit-box").offset().top - $(".fixed-listing-header").outerHeight();
-            return a;
-        }
-    });
-    $(".fixed-scroll-column-item").scrollToFixed({
-        minWidth: 1064,
-        marginTop: 200,
-        removeOffsets: true,
-        limit: function () {
-            var a = $(".limit-box").offset().top - $(".fixed-scroll-column-item").outerHeight() - 46;
-            return a;
-        }
-    });
-    $(".fix-map").scrollToFixed({
-        minWidth: 1064,
-        zIndex: 0,
-        marginTop: 80,
-        removeOffsets: true,
-        limit: function () {
-            var a = $(".limit-box").offset().top - $(".fix-map").outerHeight(true);
-            return a;
-        }
-    });
-    $(".scroll-nav-wrapper").scrollToFixed({
-        minWidth: 768,
-        zIndex: 1112,
-        marginTop: 80,
-        removeOffsets: true,
-        limit: function () {
-            var a = $(".limit-box").offset().top - $(".scroll-nav-wrapper").outerHeight(true) - 50;
-            return a;
-        }
-    });
+    //     limit: function () {
+    //         var a = $(".limit-box").offset().top - $(".fixed-listing-header").outerHeight();
+    //         return a;
+    //     }
+    // });
+    // $(".fixed-scroll-column-item").scrollToFixed({
+    //     minWidth: 1064,
+    //     marginTop: 200,
+    //     removeOffsets: true,
+    //     limit: function () {
+    //         var a = $(".limit-box").offset().top - $(".fixed-scroll-column-item").outerHeight() - 46;
+    //         return a;
+    //     }
+    // });
+    // $(".fix-map").scrollToFixed({
+    //     minWidth: 1064,
+    //     zIndex: 0,
+    //     marginTop: 80,
+    //     removeOffsets: true,
+    //     limit: function () {
+    //         var a = $(".limit-box").offset().top - $(".fix-map").outerHeight(true);
+    //         return a;
+    //     }
+    // });
+    // $(".scroll-nav-wrapper").scrollToFixed({
+    //     minWidth: 768,
+    //     zIndex: 1112,
+    //     marginTop: 80,
+    //     removeOffsets: true,
+    //     limit: function () {
+    //         var a = $(".limit-box").offset().top - $(".scroll-nav-wrapper").outerHeight(true) - 50;
+    //         return a;
+    //     }
+    // });
 
-    $(".back-tofilters").scrollToFixed({
-        minWidth: 1064,
-        zIndex: 12,
-        marginTop: 90,
-        removeOffsets: true,
+    // $(".back-tofilters").scrollToFixed({
+    //     minWidth: 1064,
+    //     zIndex: 12,
+    //     marginTop: 90,
+    //     removeOffsets: true,
 
-        limit: function () {
-            var a = $(".limit-box").offset().top - $(".back-tofilters").outerHeight(true);
-            return a;
-        }
-    });
-    $(".help-bar").scrollToFixed({
-        minWidth: 1064,
-        zIndex: 12,
-        marginTop: 100,
-        removeOffsets: true,
-        limit: function () {
-            var a = $(".limit-box").offset().top - $(".help-bar").outerHeight(true) - 60;
-            return a;
-        }
-    });
-    if ($(".fixed-bar").outerHeight(true) < $(".post-container").outerHeight(true)) {
-        $(".fixed-bar").addClass("fixbar-action");
-        $(".fixbar-action").scrollToFixed({
-            minWidth: 1064,
-            zIndex: 12,
-            marginTop: function () {
-                var a = $(window).height() - $(".fixed-bar").outerHeight(true) - 100;
-                if (a >= 0) return 20;
-                return a;
-            },
-            removeOffsets: true,
-            limit: function () {
-                var a = $(".limit-box").offset().top - $(".fixed-bar").outerHeight() - 60;
-                return a;
-            }
-        });
-    } else $(".fixed-bar").removeClass("fixbar-action");
+    //     limit: function () {
+    //         var a = $(".limit-box").offset().top - $(".back-tofilters").outerHeight(true);
+    //         return a;
+    //     }
+    // });
+    // $(".help-bar").scrollToFixed({
+    //     minWidth: 1064,
+    //     zIndex: 12,
+    //     marginTop: 100,
+    //     removeOffsets: true,
+    //     limit: function () {
+    //         var a = $(".limit-box").offset().top - $(".help-bar").outerHeight(true) - 60;
+    //         return a;
+    //     }
+    // });
+    // if ($(".fixed-bar").outerHeight(true) < $(".post-container").outerHeight(true)) {
+    //     $(".fixed-bar").addClass("fixbar-action");
+    //     $(".fixbar-action").scrollToFixed({
+    //         minWidth: 1064,
+    //         zIndex: 12,
+    //         marginTop: function () {
+    //             var a = $(window).height() - $(".fixed-bar").outerHeight(true) - 100;
+    //             if (a >= 0) return 20;
+    //             return a;
+    //         },
+    //         removeOffsets: true,
+    //         limit: function () {
+    //             var a = $(".limit-box").offset().top - $(".fixed-bar").outerHeight() - 60;
+    //             return a;
+    //         }
+    //     });
+    // } else $(".fixed-bar").removeClass("fixbar-action");
 // filter show -----------------
     var shf = $(".shsb_btn"),
         ahimcocn = $(".anim_clw"),

@@ -9375,7 +9375,7 @@ section.parallax-section {
 	margin: 0px;
 	text-align: left;
 }
-.top-services-title, .compare-quote-from-title {
+.top-services-title, .compare-quote-from-title, .quote-card-title {
 	color: #566985;
     font-size: 25px;
 	font-weight: bold;
@@ -9430,6 +9430,7 @@ section.parallax-section {
     transition: all .2s ease-in-out;
 	box-shadow: 0px 0px 0px 6px rgb(107 107 107 / 11%);
 	margin-top: 20px;
+	font-weight: bold;
 }
 .quote-form-modal-description {
 	color: #566985;
@@ -9462,4 +9463,59 @@ section.parallax-section {
 }
 .popular-cities ul li a{
 	font-size: 20px;
+}
+
+/* Thank you Page */
+.thank-you-page {
+	padding-top:200px;
+}
+.quote-result-wrap li {
+	width: 100%;
+}
+.quote-card-title {
+	padding: 0 0 20px;
+}
+.quote-card-save-icon {
+	color: #566985;
+	font-size: 18px;
+	margin: 5px 40px;
+}
+.quote-card-title, .quote-card-save-icon {
+	float: left;
+}
+.quote-card-review-score {
+	font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+    background: #4db7fe;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 5px;
+}
+.quote-card-review-score, .quote-card-review-rate {
+	float: left;
+}
+.quote-card-review-rate {
+	margin: 5px 20px;
+}
+.quote-card-star-rate {
+	margin-bottom: 5px;
+	float: left;
+    position: relative;
+}
+.quote-card-star-rate i {
+	font-size: 20px;
+    margin-right: 4px;
+    position: relative;
+	z-index: 2;
+	color: #FACC39;
+}
+.quote-card-review-count {
+	color: #566985;
+	font-size: 15px;
+}
+.quote-result-end {
+	display: inline-block;
+    margin-top: 60px;
+    position: relative;
 }

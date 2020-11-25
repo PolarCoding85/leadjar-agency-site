@@ -1,41 +1,77 @@
-import React, { useState, useEffect } from "react"
-import { useHistory, useLocation } from "react-router-dom";
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import React, {useState, useEffect} from "react";
+import {useSelector} from "react-redux";
 
-import Logo from '../../assets/images/logo.png'
+import NavbarUser from "./NavbarUser";
+import JoinLink from "./JoinLink";
 
-import SearchBar from './SearchBar'
-import WishList from "./WishList"
-import NavbarUser from './NavbarUser'
-import LanguageMenu from './LanguageMenu'
-import JoinLink from './JoinLink'
-import MainMenu from './MainMenu'
+import Logo from "../../assets/images/logo.png";
 
-export default function Navbar(props) {
-    const location = useLocation();
-  
-    const [isLogin, setIsLogin] = useState(false);
-    const [openQuoteFormModal, setOpenQuoteFormModal] = useState(false);
+export default function Navbar() {
+  const CompanyData = useSelector(
+    (state) => state.CompanyRedux && state.CompanyRedux.companyData
+  );
+  const [CompanyLogo, setLogo] = useState(null);
+  const [isLogin, setIsLogin] = useState(false);
 
+  useEffect(() => {
+    let filename =
+      CompanyData && CompanyData.branding && CompanyData.branding.company_logo;
+    if (filename) {
+      let url = `${process.env.REACT_APP_API_URL}company/${filename}`;
+      setLogo(url);
+    }
+  }, [CompanyData]);
 
-    return (
-        <header className={!isLogin ? "main-header" : "main-header dsh-header"}>
-            <a href="/" className="logo-holder"><img src={Logo} alt="" /></a>
-            <a href="#" className="add-list color-bg show-quote-from-modal quote-from-modal-open">Get a Quote</a>
-            <div className="show-reg-form modal-open avatar-img" data-srcav="images/avatar/3.jpg"><i className="fal fa-user"></i>Sign In</div>
+  return (
+    <header className={!isLogin ? "main-header" : "main-header dsh-header"}>
+      <a
+        href={
+          (CompanyData &&
+            CompanyData.branding &&
+            CompanyData.branding.logo_link) ||
+          "/"
+        }
+        className="logo-holder"
+      >
+        <img src={CompanyLogo || Logo} alt="" />
+      </a>
+      <a
+        href="#"
+        className="add-list color-bg show-quote-from-modal quote-from-modal-open"
+      >
+        {(CompanyData && CompanyData.callToAction) || "Get a Quote"}
+      </a>
+      <div
+        className="show-reg-form modal-open avatar-img"
+        data-srcav="images/avatar/3.jpg"
+      >
+        <i className="fal fa-user"></i>Sign In
+      </div>
 
-            {isLogin ? <NavbarUser /> : null}
-            <JoinLink />
+      {isLogin ? <NavbarUser /> : null}
+      {CompanyData &&
+      CompanyData.navigationMenu &&
+      CompanyData.navigationMenu.enable ? (
+        <JoinLink
+          title={
+            CompanyData.navigationMenu.join_our_network_title ||
+            "Join Our Pro Network"
+          }
+          status={CompanyData.navigationMenu.join_our_network_status || "false"}
+        />
+      ) : null}
 
-            {/*  nav-button-wrap  */}
-            <div className="nav-button-wrap color-bg">
-                <div className="nav-button">
-                    <span></span><span></span><span></span>
-                </div>
-            </div>
-            {/*  nav-button-wrap end */}
+      {/*  nav-button-wrap  */}
+      <div className="nav-button-wrap color-bg">
+        <div className="nav-button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      {/*  nav-button-wrap end */}
 
-            {/* <MainMenu /> */}
-        </header>
-    )
+      {/* <MainMenu /> */}
+    </header>
+  );
 }

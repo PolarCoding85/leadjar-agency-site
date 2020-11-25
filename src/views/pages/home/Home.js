@@ -3,7 +3,7 @@ import { Row, Col } from "reactstrap"
 
 import Navbar from "../../../layouts/navbar/Navbar"
 import Footer from "../../../layouts/footer/Footer"
-import Content from "./contents/Content"
+import Content from "./Contents/Content"
 import MapModal from "../../ui-elements/modal/MapModal"
 
 export default function Home(props) {

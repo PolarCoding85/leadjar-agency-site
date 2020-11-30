@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {BrowserRouter} from "react-router-dom";
-import {Provider} from "react-redux";
-import {createStore} from "redux";
-import {composeWithDevTools} from "redux-devtools-extension";
+import { BrowserRouter } from "react-router-dom";
+import { Provider } from "react-redux";
+import { createStore } from "redux";
+import { composeWithDevTools } from "redux-devtools-extension";
 import axios from "axios";
 
 import rootReducer from "./redux";
@@ -28,17 +28,17 @@ const getConfig = () => {
   });
 };
 
-getConfig().then(() => {
-  ReactDOM.render(
-    <BrowserRouter>
-      <Provider store={store}>
-        <App />
-      </Provider>
-    </BrowserRouter>,
-    document.getElementById("root")
-  );
-}).catch(err => ReactDOM.render(<ErrorPage />,
+// getConfig().then(() => {
+ReactDOM.render(
+  <BrowserRouter>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </BrowserRouter>,
   document.getElementById("root")
-))
+);
+// }).catch(err => ReactDOM.render(<ErrorPage />,
+//   document.getElementById("root")
+// ))
 
 serviceWorker.unregister();

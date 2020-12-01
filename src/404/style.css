@@ -1,0 +1,36 @@
+.mainBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.ErrorMsg h1 {
+  color: #4db7fe;
+  text-transform: capitalize;
+  font-size: 30px;
+  margin-top: 10px;
+}
+.errorBtn {
+  padding: 15px;
+  color: #4db7fe;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  text-decoration: underline;
+}
+.img-fluid {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 767px) {
+  .ErrorMsg h1 {
+    font-size: 15px;
+  }
+  .errorBtn {
+    font-size: 10px;
+  }
+}

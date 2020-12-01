@@ -16,6 +16,8 @@ import DashboardEmailPreference from './views/pages/dashboard/emailPreferences/E
 import DashboardMessages from './views/pages/dashboard/messages/Messages'
 import DashboardEditProfile from './views/pages/dashboard/editProfile/EidtProfile'
 import DashboardChangePassword from './views/pages/dashboard/changePassword/ChangePassword'
+import PrivacyPolicy from "./views/pages/termsandprivacy/privacypolicy";
+import Termsofuser from "./views/pages/termsandprivacy/termsofuser";
 
 export default function AppRouter() {
     return (
@@ -34,6 +36,8 @@ export default function AppRouter() {
                 <Route path="/dashboard_messages" component={DashboardMessages} />
                 <Route path="/dashboard_profile" component={DashboardEditProfile} />
                 <Route path="/dashboard_change_password" component={DashboardChangePassword} />
+                <Route path="/terms_of_user" component={Termsofuser} />
+                <Route path="/privacy_policy" component={PrivacyPolicy} />
             </Switch>
         </Router>
     )

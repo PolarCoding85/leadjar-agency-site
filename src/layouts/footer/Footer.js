@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react"
-import { useLocation } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
+import { connect } from 'react-redux'
 
 import Logo from "../../assets/images/logo.png"
 import AllIcon from "../../assets/images/all/1.jpg"
 
-export default function Footer(props) {
+function Footer(props) {
   const location = useLocation()
+  console.log(props)
 
   return (
     <footer className="main-footer fl-wrap">
@@ -193,7 +195,7 @@ export default function Footer(props) {
       {/* sub-footer--> */}
       <div className="sub-footer  fl-wrap">
         <div className="container">
-          <div className="copyright"> &#169; hellotaxes 2020 . All rights reserved.</div>
+          <div className="copyright"> {props.footerData && props.footerData.footer.Copyright}</div>
           <div className="lang-wrap">
             <div className="show-lang">
               <span>
@@ -227,11 +229,12 @@ export default function Footer(props) {
           </div>
           <div className="subfooter-nav">
             <ul className="no-list-style">
+
               <li>
-                <a href="#">Terms of use</a>
+                <Link to='/terms_of_user'>Terms Of User</Link>
               </li>
               <li>
-                <a href="#">Privacy Policy</a>
+                <Link to='/privacy_policy'>Privacy Policy</Link>
               </li>
               <li>
                 <a href="#">Do Not Sell My Info</a>
@@ -244,3 +247,11 @@ export default function Footer(props) {
     </footer>
   )
 }
+
+const mapStateToProps = (state) => {
+  return {
+    footerData: state.CompanyRedux.companyData
+  }
+}
+
+export default connect(mapStateToProps, null)(Footer)

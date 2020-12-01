@@ -2,14 +2,17 @@
 function initTowhub() {
   "use strict";
   //   loader ------------------
-  $(".loader-wrap").fadeOut(300, function () {
-    $("#main").animate(
+  // $(".loader-wrap").fadeOut(300, function () {
+  setTimeout(() => {
+    $("#main").css(
       {
         opacity: "1",
+        "z-index": "9999",
       },
       600
     );
-  });
+  }, 1000);
+  // });
   //   Background image ------------------
   var a = $(".bg");
   a.each(function (a) {
@@ -1247,35 +1250,37 @@ function initTowhub() {
   var sArray = [2, 4, 6, 8];
   $.get("https://leadjar-backend.uc.r.appspot.com/v1.0/agency", (res) => {
     let text = res.data.hero.Title;
-    $(".bubbles").children('#title').text(text);
-    for (var i = 0; i < $(".bubbles").width(); i++) {
-      bArray.push(i);
-    }
-    function randomValue(arr) {
-      return arr[Math.floor(Math.random() * arr.length)];
-    }
-    setInterval(function () {
-      var size = randomValue(sArray);
-      $(".bubbles").append(
-        '<div class="individual-bubble" style="left: ' +
-          randomValue(bArray) +
-          "px; width: " +
-          size +
-          "px; height:" +
-          size +
-          'px;"></div>'
-      );
-      $(".individual-bubble").animate(
-        {
-          bottom: "100%",
-          opacity: "-=0.7",
-        },
-        4000,
-        function () {
-          $(this).remove();
-        }
-      );
-    }, 350);
+    $(".bubbles").children("#title").text(text);
+    setTimeout(() => {
+      for (var i = 0; i < $(".bubbles").width(); i++) {
+        bArray.push(i);
+      }
+      function randomValue(arr) {
+        return arr[Math.floor(Math.random() * arr.length)];
+      }
+      setInterval(function () {
+        var size = randomValue(sArray);
+        $(".bubbles").append(
+          '<div class="individual-bubble" style="left: ' +
+            randomValue(bArray) +
+            "px; width: " +
+            size +
+            "px; height:" +
+            size +
+            'px;"></div>'
+        );
+        $(".individual-bubble").animate(
+          {
+            bottom: "100%",
+            opacity: "-=0.7",
+          },
+          4000,
+          function () {
+            $(this).remove();
+          }
+        );
+      }, 350);
+    }, 500);
   });
   if ($(".col-list-wrap").hasClass("novis_to-top")) {
     $(".to-top")

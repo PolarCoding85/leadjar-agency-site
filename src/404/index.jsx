@@ -13,7 +13,7 @@ const ModuleNotFound = () => {
         <img src={Error} alt="" className="img-fluid"/>
       </div>
       <div className="ErrorMsg">
-        <h1>your company is not Register</h1>
+        <h1>your company is not Registered</h1>
       </div>
       <a href="http://www.leadjar.io" target="_blank" className="errorBtn">Login and register your company</a>
     </div>

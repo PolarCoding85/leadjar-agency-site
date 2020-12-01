@@ -1,14 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter } from "react-router-dom";
-import { Provider } from "react-redux";
-import { createStore } from "redux";
-import { composeWithDevTools } from "redux-devtools-extension";
+import {BrowserRouter} from "react-router-dom";
+import {Provider} from "react-redux";
+import {createStore} from "redux";
+import {composeWithDevTools} from "redux-devtools-extension";
 import axios from "axios";
 
 import rootReducer from "./redux";
 import * as serviceWorker from "./serviceWorker";
-import ErrorPage from "./404"
+import ErrorPage from "./404";
 
 import "./index.css";
 
@@ -21,24 +21,27 @@ const store = createStore(rootReducer, composeWithDevTools());
 // Learn more about service workers: https://bit.ly/CRA-PWA
 const getConfig = () => {
   return new Promise((resolve, reject) => {
-    var subdomain = window.location.host.split('.')[0];
+    var subdomain = window.location.host.split(".")[0];
     axios
       .get(`${process.env.REACT_APP_API_URL}v1.0/agency/${subdomain}`)
-      .then((response) => resolve(response)).catch(err => reject(err));
+      .then((response) => resolve(response))
+      .catch((err) => reject(err));
   });
 };
 
-// getConfig().then(() => {
-ReactDOM.render(
-  <BrowserRouter>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </BrowserRouter>,
-  document.getElementById("root")
-);
-// }).catch(err => ReactDOM.render(<ErrorPage />,
-//   document.getElementById("root")
-// ))
+// getConfig()
+  // .then(() => {
+    ReactDOM.render(
+      <BrowserRouter>
+        <Provider store={store}>
+          <App />
+        </Provider>
+      </BrowserRouter>,
+      document.getElementById("root")
+    );
+  // })
+  // .catch((err) =>
+  //   ReactDOM.render(<ErrorPage />, document.getElementById("root"))
+  // );
 
 serviceWorker.unregister();

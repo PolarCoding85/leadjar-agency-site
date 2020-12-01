@@ -36,8 +36,8 @@ export default function AppRouter() {
                 <Route path="/dashboard_messages" component={DashboardMessages} />
                 <Route path="/dashboard_profile" component={DashboardEditProfile} />
                 <Route path="/dashboard_change_password" component={DashboardChangePassword} />
-                <Route path="/terms_of_user" component={PrivacyPolicy} />
-                <Route path="/privacy_policy" component={Termsofuser} />
+                <Route path="/terms_of_user" component={Termsofuser} />
+                <Route path="/privacy_policy" component={PrivacyPolicy} />
             </Switch>
         </Router>
     )

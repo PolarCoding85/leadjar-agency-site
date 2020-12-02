@@ -57,7 +57,7 @@ export default function Navbar() {
             CompanyData.navigationMenu.join_our_network_title ||
             "Join Our Pro Network"
           }
-          status={CompanyData.navigationMenu.join_our_network_status || "false"}
+          status={CompanyData.navigationMenu.join_our_network_status || false}
         />
       ) : null}
 

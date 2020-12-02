@@ -1,9 +1,9 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 
 export default function Join(props) {
   return (
     <>
-      {props.status === "true" ? (
+      {props.status ? (
         <div className="lang-wrap">
           <div className="show-join-link">
             <span>

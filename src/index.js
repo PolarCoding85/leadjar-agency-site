@@ -29,8 +29,8 @@ const getConfig = () => {
   });
 };
 
-// getConfig()
-  // .then(() => {
+getConfig()
+  .then(() => {
     ReactDOM.render(
       <BrowserRouter>
         <Provider store={store}>
@@ -39,9 +39,9 @@ const getConfig = () => {
       </BrowserRouter>,
       document.getElementById("root")
     );
-  // })
-  // .catch((err) =>
-  //   ReactDOM.render(<ErrorPage />, document.getElementById("root"))
-  // );
+  })
+  .catch((err) =>
+    ReactDOM.render(<ErrorPage />, document.getElementById("root"))
+  );
 
 serviceWorker.unregister();

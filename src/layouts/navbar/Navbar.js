@@ -1,19 +1,24 @@
 import React, {useState, useEffect} from "react";
-import {useSelector} from "react-redux";
+import {connect, useSelector} from "react-redux";
 
 import NavbarUser from "./NavbarUser";
 import JoinLink from "./JoinLink";
 
 import Logo from "../../assets/images/logo.png";
+import { getCompanyLogo } from '../../redux/actions/brandingLogo/brandingLogoAction';
 
-export default function Navbar() {
+function  Navbar(props){
   const CompanyData = useSelector(
     (state) => state.CompanyRedux && state.CompanyRedux.companyData
   );
   const [CompanyLogo, setLogo] = useState(null);
   const [isLogin, setIsLogin] = useState(false);
+    const [ companyLogourl, setcompanyLogourl] = useState()
 
   useEffect(() => {
+    props.companyLogo();
+    console.log("...............",props);
+    console.log("propspropspropsoprops",props.allCompanyLogo)
     let filename =
       CompanyData && CompanyData.branding && CompanyData.branding.company_logo;
     if (filename) {
@@ -33,7 +38,12 @@ export default function Navbar() {
         }
         className="logo-holder"
       >
-        <img src={CompanyLogo || Logo} alt="" />
+        {
+          props.allCompanyLogo.brandingLogo.companyLogo ?
+            <img src={`${process.env.REACT_APP_API_URL}branding/company_logo/${props.allCompanyLogo.brandingLogo.companyLogo}` || Logo} alt="" style={{borderRadius:'100%',width:'40px',height:'40px'}}/>
+          :
+            <img src={Logo} alt=""/>
+        }
       </a>
       <a
         href="#"
@@ -75,3 +85,18 @@ export default function Navbar() {
     </header>
   );
 }
+const mapStateToProps = (state) => {
+  return {
+    allCompanyLogo:state.BrandingLogo,
+  } 
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    companyLogo: () => dispatch(getCompanyLogo()),
+  }
+}
+
+
+
+export default connect(mapStateToProps,mapDispatchToProps)(Navbar);
